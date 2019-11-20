@@ -1,0 +1,8 @@
+#!/bin/sh
+
+interface="${interface}"
+inet="${inet}"
+ip=$(ip address show $interface | grep $inet | awk '{print $2}' | cut -d/ -f1)
+
+printf "%s" "$ip"
+
