@@ -13,6 +13,11 @@ label=
 mount_point=/run 
 interval=60
 
+[ip]
+interface=ens33
+inet=inet
+interval=3600
+
 [internet]
 interval=60
 
@@ -20,8 +25,4 @@ interval=60
 label=📦
 interval=once
 
-[ip]
-interface=ens33
-inet=inet6
-interval=3600
 

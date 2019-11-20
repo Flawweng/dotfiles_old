@@ -2,7 +2,9 @@
 
 interface="${interface}"
 inet="${inet}"
-ip=$(ip address show $interface | grep $inet | awk '{print $2}' | cut -d/ -f1)
+ip=$(ip address show $interface | grep $inet | awk '{print $2}' | cut -d/ -f1 | head -n 1)
 
-printf "%s" "$ip"
+echo "" $ip # full text
+echo $ip # short text
+echo "#00FF00"
 
