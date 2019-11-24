@@ -25,13 +25,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'scrooloose/syntastic'
-" Plugin 'SirVer/ultisnips'
-" Plugin 'honza/vim-snippets'
-" Plugin 'pangloss/vim-javascript'
+" Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'tpope/vim-fugitive'
-Plugin 'valloric/YouCompleteme'
+" Plugin 'valloric/YouCompleteme'
 
 
 call vundle#end()            " required
@@ -40,7 +37,21 @@ colorscheme molokai
 
 filetype plugin indent on    " required
 
+" Map jj to <Esc>
 imap jj <Esc>
+
+"Disable arrow keys in Normal mode
+no <Up> <Nop>
+no <Down> <Nop>
+no <Left> <Nop>
+no <Right> <Nop>
+
+"Disable arrow keys in Insert mode
+ino <Up> <Nop>
+ino <Down> <Nop>
+ino <Left> <Nop>
+ino <Right> <Nop>
+
 map <F5> mzgg=G`z
 
 map <F2> :NERDTreeToggle<CR>
