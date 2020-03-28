@@ -1,4 +1,0 @@
-#!/bin/sh
-
-mount_point="${mount_point}"
-printf "%s %s\n" "$mount_point" "$(df -h $mount_point | awk ' /[0-9]/ {print $3 "/" $2}')"

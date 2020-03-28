@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-pacman -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g"
