@@ -5,6 +5,7 @@ syntax on
 set mouse=a
 set clipboard=unnamed
 set backspace=indent,eol,start
+set cursorline
 
 set tabstop=2
 set shiftwidth=2
@@ -14,24 +15,19 @@ set noswapfile
 " Always show statusline
 set laststatus=2
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'flazz/vim-colorschemes'
+Plug 'jiangmiao/auto-pairs'
 " Plugin 'scrooloose/syntastic'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'valloric/YouCompleteme'
 
-
-call vundle#end()            " required
+call plug#end()            " required
 
 colorscheme molokai
 
@@ -68,21 +64,6 @@ let NERDTreeDirArrows = 1
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"
-"
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['flake8']
-
-let g:SuperTabClosePreviewOnPopupClose = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
