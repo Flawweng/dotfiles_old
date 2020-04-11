@@ -11,6 +11,7 @@ set tabstop=2
 set shiftwidth=2
 set relativenumber
 set noswapfile
+set belloff=all
 
 " Always show statusline
 set laststatus=2
