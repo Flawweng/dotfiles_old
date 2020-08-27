@@ -6,10 +6,10 @@ set nocompatible
 set autoindent
 " Convert tabs to spaces
 set expandtab
-" Shifting indent 2 spaces
-set shiftwidth=2
-" Indent using 2 spaces
-set tabstop=2
+" Shifting indent 4 spaces
+set shiftwidth=4
+" Indent using 4 spaces
+set tabstop=4
 
 """ Search options
 "Enable search highlighting
@@ -31,9 +31,9 @@ set title
 " Show line numbers
 set number
 " Show cursor position
-set ruler
+" set ruler
 " Highlight the line currently under cursor
-set cursorline
+" set cursorline
 " Always display the status bar
 set laststatus=2
 " Display command line's tab complete options as a menu
@@ -69,3 +69,5 @@ set autoread
 set backspace=indent,eol,start
 " Disable swap files
 set noswapfile
+
+set clipboard=unnamed
